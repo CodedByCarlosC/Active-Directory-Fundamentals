@@ -1,13 +1,12 @@
 # Active-Directory-Fundamentals
+
 Hands-on Active Directory lab covering users, computers, GPOs, authentication, and enterprise domain architecture.
 # 🏢 Active Directory Fundamentals – Enterprise Lab
 
 ## 📘 Overview
 
 This repository documents my **hands-on learning and administration of Microsoft Active Directory** through a TryHackMe enterprise-style lab environment.
-
 The focus of this project was to understand how **Windows domains are structured, managed, and secured at scale**, while performing real administrative tasks that reflect real-world corporate environments.
-
 Rather than following step-by-step instructions, this project emphasizes **why design and security decisions are made**, how policies affect users and systems, and where common Active Directory risks exist.
 
 ---
@@ -35,7 +34,9 @@ Rather than following step-by-step instructions, this project emphasizes **why d
   - Active Directory Users and Computers (ADUC)  
   - Group Policy Management  
   - PowerShell  
-  - Remote Desktop Protocol (RDP)  
+  - Remote Desktop Protocol (RDP)
+ 
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/domain%20policy.png)
 
 ---
 
@@ -70,6 +71,8 @@ Tasks included:
 This reflects real-world enterprise security practices.
 
 ![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/97fc379205c81637ae97d1e0fbec62496a37b391/tasks%20to%20delegate.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/restrict%20access.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/powershell%20command.PNG)
 
 ---
 
@@ -85,72 +88,60 @@ I created and managed multiple GPOs to enforce security baselines, including:
 Policy behavior was validated using test accounts and forced updates with:
 ```powershell & gpupdate /force `
 
-![image]()
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/gpos.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/drag%20the%20access.png)
 
 ---
 
 🔑 Authentication in Windows Domains
 
 I explored how authentication works within Active Directory:
-
 Kerberos (Default)
-
 Ticket-based authentication using TGTs and TGSs
-
 Centralized validation via the Domain Controller
-
 Secure, scalable authentication for modern domains
-
 NetNTLM (Legacy)
-
 Challenge–response authentication
-
 Retained for backward compatibility
-
 Increased attack surface compared to Kerberos
-
 Understanding both protocols is critical for detecting authentication abuse and lateral movement.
 
-![image]()
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/tgt1.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/tgt2.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/tgt3.png)
 
 ---
 
 🌐 Scaling Active Directory
 
 I studied how Active Directory scales in enterprise environments using:
-
 Domain trees for shared namespaces
-
 Forests for multiple namespaces
-
 Trust relationships for controlled cross-domain access
-
 Authentication across domains does not imply authorization; access must always be explicitly granted.
 
-![image]()
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/tree.png)
 
 ---
 
 🛡️ Security Takeaways
 
 Active Directory is a primary attack surface in enterprises
-
 OU and GPO design directly impact security posture
-
 Delegation and least privilege reduce risk
-
 Authentication misconfigurations enable lateral movement
-
 Strong architecture improves detection and response
+
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/auto%20lock.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/no%20access.png)
+![image](https://github.com/CodedByCarlosC/Active-Directory-Fundamentals/blob/6dd86b17b7b4255c4da6635877f48ca951816cc1/advance%20features.png)
 
 ---
 
 🚀 Next Steps
 
 Additional Active Directory security labs
-
 Authentication and log analysis
-
 SIEM-based monitoring of domain activity
 
 ---
